@@ -17,9 +17,8 @@ const App = () => {
   const [data, setData] = useState();
   const [uid, setUid] = useState("random");
 
-  const base = process.env.baseURL || "http://localhost:5000";
-
   useEffect(() => {
+    const base = process.env.baseURL || "http://localhost:5000";
     const dataFetch = () => {
       axios
         .get(`${base}/item/data`)
