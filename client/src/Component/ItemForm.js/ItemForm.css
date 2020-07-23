@@ -73,3 +73,12 @@ input[type="submit"]:hover {
   justify-content: center;
   color: white;
 }
+
+/* media query */
+@media only screen and (max-width: 400px) {
+  .mainContainer,
+  .itemDash,
+  .itemFormDiv {
+    width: 90%;
+  }
+}
