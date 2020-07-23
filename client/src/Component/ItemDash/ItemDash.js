@@ -20,6 +20,8 @@ const ItemDash = (prop) => {
   const { uid, setUid } = useContext(UniqueId);
   const [upload, setUpload] = useState(false);
 
+  const base = process.env.baseURL || "http://localhost:5000";
+
   // let specificValue = data.find((x) => x._id === uid);
   // console.log(specificValue);
 
@@ -28,7 +30,7 @@ const ItemDash = (prop) => {
   }
 
   const moveHandler = () => {
-    history.push("/item/form");
+    history.push(`${base}/item/form`);
   };
 
   const deleteHandler = async () => {

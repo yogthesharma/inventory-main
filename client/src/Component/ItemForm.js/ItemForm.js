@@ -23,6 +23,8 @@ const ItemForm = () => {
   // data upload items
   const [upload, setUpload] = useState(false);
 
+  const base = process.env.baseURL || "http://localhost:5000";
+
   const submit = async (e) => {
     e.preventDefault();
     setUpload(true);
@@ -46,7 +48,7 @@ const ItemForm = () => {
     formData.append("data", json);
 
     await axios
-      .post("http://localhost:5000/item/post", formData, config)
+      .post(`${base}/item/post`, formData, config)
       .then((res) => {
         console.log(res.data);
         setSuccess(res.data);
