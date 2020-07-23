@@ -1,6 +1,5 @@
 import React, {  useState, useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
-import axios from "axios";
 
 // importing styling
 import "./Dashboard.css";

@@ -46,7 +46,7 @@ const ItemForm = () => {
     formData.append("data", json);
 
     await axios
-      .post("http://localhost:8080/item/post", formData, config)
+      .post("/item/post", formData, config)
       .then((res) => {
         console.log(res.data);
         setSuccess(res.data);
