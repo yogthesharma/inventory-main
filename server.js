@@ -37,7 +37,9 @@ mongoose.connect(
     console.log("Database Connected");
   }
 );
-
+if (process.env.NODE_ENV === "production") {
+  app.use("*", express.static(path.join(__dirname, "client", "build")));
+}
 // starting up the server
 app.listen(port, () => {
   console.log(`Server Started At Port ${port}`);
