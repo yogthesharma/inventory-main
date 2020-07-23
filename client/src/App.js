@@ -18,7 +18,7 @@ const App = () => {
   const [uid, setUid] = useState("random");
 
   useEffect(() => {
-    const base = process.env.baseURL || "http://localhost:5000";
+    const base = process.env.baseURL || "http://localhost:5000/";
     const dataFetch = () => {
       axios
         .get(`${base}/item/data`)
@@ -28,6 +28,7 @@ const App = () => {
         .catch((err) => console.log(err.response.data));
     };
     dataFetch();
+    console.log(base);
   }, []);
   return (
     <div>
