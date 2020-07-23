@@ -16,7 +16,6 @@ export const UniqueId = React.createContext();
 const App = () => {
   const [data, setData] = useState();
   const [uid, setUid] = useState("random");
-  console.clear();
 
   useEffect(() => {
     const dataFetch = () => {
