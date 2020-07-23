@@ -24,7 +24,7 @@ const port = process.env.PORT || 5000;
 // making productiion server
 
 // getting router here
-app.use("/item", require("./route/ItemRoute"));
+app.use("/item", cors(), require("./route/ItemRoute"));
 
 // stackoverflow solution
 app.use(function (req, res, next) {
