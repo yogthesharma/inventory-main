@@ -29,11 +29,12 @@ app.use("/item", require("./route/ItemRoute"));
 // mongoose configs
 console.log(process.env.MONGO_URI);
 mongoose.connect(
-  process.env.MONGO_URI,
+  "mongodb+srv://yogsharma:yogsharma@cluster0.nd35c.mongodb.net/inventorySample?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: true,
+    useMongoClient: true,
   },
   (err) => {
     if (err) return console.log("Database Connection Failed");
