@@ -8,9 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 // [port] var
-const port = process.env.PORT || 8080;
 
-// making productiion server
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 
@@ -18,6 +16,10 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }
+
+const port = process.env.PORT || 8080;
+
+// making productiion server
 
 // getting router here
 app.use("/item", require("./route/ItemRoute"));
