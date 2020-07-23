@@ -2,6 +2,8 @@ const express = require(`express`);
 const cors = require(`cors`);
 const mongoose = require(`mongoose`);
 const path = require(`path`);
+// adding dotenv configs
+require(`dotenv`).config();
 
 // starting app var
 const app = express();
@@ -19,6 +21,7 @@ if (process.env.NODE_ENV === "production") {
 
 const port = process.env.PORT || 5000;
 
+
 // making productiion server
 
 // getting router here
@@ -26,7 +29,7 @@ app.use("/item", require("./route/ItemRoute"));
 
 // mongoose configs
 mongoose.connect(
-  "mongodb+srv://yogsharma:yogsharma@cluster0.nd35c.mongodb.net/inventorySample?retryWrites=true&w=majority",
+  process.env.MONGO_URI,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
