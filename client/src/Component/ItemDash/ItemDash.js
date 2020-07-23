@@ -37,7 +37,7 @@ const ItemDash = (prop) => {
       console.log(uid);
       await axios
         .delete(
-          "/item/delete",
+          "http://localhost:5000/item/delete",
 
           {
             headers: {

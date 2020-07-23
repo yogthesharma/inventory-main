@@ -20,7 +20,7 @@ const App = () => {
   useEffect(() => {
     const dataFetch = () => {
       axios
-        .get("/item/data")
+        .get("http://localhost:5000/item/data")
         .then((res) => {
           setData(res.data.items);
         })
