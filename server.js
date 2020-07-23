@@ -21,13 +21,13 @@ if (process.env.NODE_ENV === "production") {
 
 const port = process.env.PORT || 5000;
 
-
 // making productiion server
 
 // getting router here
 app.use("/item", require("./route/ItemRoute"));
 
 // mongoose configs
+console.log(process.env.MONGO_URI);
 mongoose.connect(
   process.env.MONGO_URI,
   {
