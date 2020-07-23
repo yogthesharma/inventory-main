@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: -moz-linear-gradient(
+      to right,
+      rgba(2, 0, 36, 0.8) 0%,
+      rgba(9, 9, 121, 0.8) 35%,
+      rgba(0, 212, 255, 0.7) 100%
+    ),
+    url("./assets/image.jpg") no-repeat;
+  background-size: cover;
+}
+
+Link {
+  text-decoration: none;
+}
