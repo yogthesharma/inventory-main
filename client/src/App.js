@@ -25,7 +25,7 @@ const App = () => {
         .then((res) => {
           setData(res.data.items);
         })
-        .catch((err) => console.log(err.response.data));
+        // .catch((err) => console.log(err.response.data));
     };
     dataFetch();
     console.log(base);
