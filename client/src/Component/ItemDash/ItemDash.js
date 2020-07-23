@@ -30,7 +30,7 @@ const ItemDash = (prop) => {
   }
 
   const moveHandler = () => {
-    history.push(`${base}/item/form`);
+    history.push(`/item/form`);
   };
 
   const deleteHandler = async () => {
@@ -39,7 +39,7 @@ const ItemDash = (prop) => {
       console.log(uid);
       await axios
         .delete(
-          "http://localhost:5000/item/delete",
+          `${base}item/delete`,
 
           {
             headers: {

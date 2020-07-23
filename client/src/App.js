@@ -21,7 +21,7 @@ const App = () => {
     const base = process.env.baseURL || "http://localhost:5000/";
     const dataFetch = () => {
       axios
-        .get(`${base}/item/data`)
+        .get(`${base}item/data`)
         .then((res) => {
           setData(res.data.items);
         })
