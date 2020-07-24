@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "App For Inventory Management",
   "main": "server.js",
+  "engines": {
+    "node": "12.18. 2",
+    "npm": "6.14.6"
+  },
   "scripts": {
     "client-install": "npm inatall --prefix client",
     "start": "node server.js",
