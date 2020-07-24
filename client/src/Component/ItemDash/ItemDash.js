@@ -20,7 +20,6 @@ const ItemDash = (prop) => {
   const { uid, setUid } = useContext(UniqueId);
   const [upload, setUpload] = useState(false);
 
-  const base = process.env.baseURL || "http://localhost:5000";
 
   // let specificValue = data.find((x) => x._id === uid);
   // console.log(specificValue);
@@ -38,18 +37,14 @@ const ItemDash = (prop) => {
     if (uid) {
       console.log(uid);
       await axios
-        .delete(
-          `${base}item/delete`,
-
-          {
-            headers: {
-              "Content-Type": "application/json",
-            },
-            data: {
-              _id: uid,
-            },
-          }
-        )
+        .delete(`/item/delete`, {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          data: {
+            _id: uid,
+          },
+        })
         .then((res) => {
           console.log(res.data);
           history.push("/");

@@ -17,6 +17,7 @@ app.use(function (req, res, next) {
 
 app.use(express.json());
 app.use(cors());
+
 // [port] var
 
 if (process.env.NODE_ENV === "production") {
@@ -32,7 +33,7 @@ const port = process.env.PORT || 5000;
 // making productiion server
 
 // getting router here
-app.use("/item", cors(), require("./route/ItemRoute"));
+app.use("/item", require("./route/ItemRoute"));
 
 // stackoverflow solution
 
